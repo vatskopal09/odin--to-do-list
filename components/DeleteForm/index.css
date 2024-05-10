@@ -1,0 +1,33 @@
+form.del-todo-form {
+  font: inherit;
+  color: inherit;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px #ddd;
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
+  place-content: center;
+  gap: 1rem;
+
+  div.del-todo-msg {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div.del-todo-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    button.del-todo-option.del-todo-confirm {
+      background-color: #930;
+    }
+
+    button.del-todo-option.del-todo-cancel {
+      background-color: #777;
+    }
+  }
+}

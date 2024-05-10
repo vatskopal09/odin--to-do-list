@@ -1,0 +1,87 @@
+div.todo-card * {
+  font: inherit;
+  color: inherit;
+  width: auto;
+}
+
+div.todo-card {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 #ddd;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  align-items: center;
+
+  div.title {
+    grid-column: 1 / 4;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  div.due-date {
+    grid-column: 4 / 6;
+    font-size: x-small;
+    text-align: right;
+    color: #093;
+
+    &.overdue {
+      color: #930;
+    }
+  }
+
+  div.description {
+    justify-self: center;
+    grid-column: 1 / 6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: small;
+    text-align: left;
+    padding: 1rem 0;
+  }
+
+  div.priority {
+    grid-column: 1 / 3;
+    justify-self: start;
+    width: max-content;
+    border-radius: 1rem;
+    text-wrap: nowrap;
+
+    &.low {
+      background-color: #b95;
+    }
+
+    &.medium {
+      background-color: #c83;
+    }
+
+    &.high {
+      background-color: #d70;
+    }
+  }
+
+  div.priority,
+  button.edit.edit,
+  button.delete.delete {
+    align-self: end;
+    padding: 0.5rem;
+    font-size: small;
+    color: #fff;
+    text-align: center;
+  }
+
+  button.edit.edit {
+    grid-column: 4 / 5;
+    justify-self: end;
+    width: 100%;
+  }
+
+  button.delete.delete {
+    grid-column: 5 / 6;
+    justify-self: end;
+    width: 100%;
+  }
+}

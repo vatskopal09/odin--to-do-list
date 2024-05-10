@@ -1,0 +1,43 @@
+div.project-card * {
+  font: inherit;
+  color: inherit;
+  width: auto;
+}
+
+div.project-card {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 #ddd;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  align-items: center;
+
+  div.title {
+    grid-column: 1 / 4;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  button.edit.edit,
+  button.delete.delete {
+    padding: 0.5rem;
+    font-size: small;
+    color: #fff;
+    text-align: center;
+  }
+
+  button.edit.edit {
+    grid-column: 4 / 5;
+    justify-self: end;
+    width: 100%;
+  }
+
+  button.delete.delete {
+    grid-column: 5 / 6;
+    justify-self: end;
+    width: 100%;
+  }
+}

@@ -1,0 +1,120 @@
+html {
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  color: #333;
+}
+
+*::after,
+*::before,
+* {
+  box-sizing: inherit;
+}
+
+body,
+header,
+main,
+footer {
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+header > *,
+main {
+  max-width: 960px;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 #ddd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 0.5rem;
+
+  .todo-head {
+    /* color: #093; */
+    font-size: xx-large;
+    font-weight: normal;
+    color: #333;
+    margin: 0;
+  }
+
+  .todo-controls {
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+
+    button.new-todo.new-todo {
+      grid-column: 1 / 4;
+    }
+
+    button.new-project.new-project {
+      grid-column: 4 / 7;
+    }
+
+    button.show-projects.show-projects {
+      grid-column: 1 / 3;
+    }
+
+    .projects-menu {
+      grid-column: 3 / 7;
+    }
+
+    button.new-todo.new-todo,
+    button.new-project.new-project,
+    button.show-projects.show-projects,
+    .projects-menu {
+      font-size: small;
+      font-weight: bold;
+      color: #555;
+      background-color: #fff;
+      box-shadow: 0 0 2px 0 #d90;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        box-shadow: 0 1px 3px 0 #bbb;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  margin: 10rem auto 1rem;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100vw), 1fr));
+  gap: 1rem;
+}
